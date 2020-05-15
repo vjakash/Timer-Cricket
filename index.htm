@@ -7,15 +7,70 @@
     <link rel="shortcut icon" href="cricket.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
     <title>Timer-Cricket</title>
+    <style>
+        #dialogoverlay {
+            display: none;
+            opacity: .8;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        #dialogbox {
+            display: none;
+            position: fixed;
+            background: #000;
+            border-radius: 7px;
+            width: 550px;
+            z-index: 10;
+        }
+        
+        #dialogbox>div {
+            background: #FFF;
+            margin: 8px;
+        }
+        
+        #dialogbox>div>#dialogboxhead {
+            background: #666;
+            font-size: 19px;
+            padding: 10px;
+            color: #CCC;
+        }
+        
+        #dialogbox>div>#dialogboxbody {
+            background: #333;
+            padding: 20px;
+            color: #FFF;
+        }
+        
+        #dialogbox>div>#dialogboxfoot {
+            background: #666;
+            padding: 10px;
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead">Game Rules</div>
+            <div id="dialogboxbody">*There are 2 teams with 10 players each, play against each other.<br> *Each Player get 6 balls to play.<br> *Scores 0,1,2,4,6 will be changing continously,Player has to click "HIT" button at the time of display to get correspondig score .<br>                *If the Player gets 0 ,he is out. *Each team gets 60 secs to finish their innings,after 60 sec the "HIT" button will be disabled <br> *The team with highest score wins the match <br> *The man of the match goes to the highest scorer
+            </div>
+            <div id="dialogboxfoot" class="text-white ">Are you ready to PLAY????????&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+        </div>
+    </div>
     <div class="container-fuild text-center bg-dark text-white">
         <h1>Timer Cricket</h1>
     </div>
     <br>
 
     <script src="index.js"></script>
+
 </body>
 
 </html>
