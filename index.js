@@ -81,6 +81,7 @@ window.onload = function () {
     container2.innerHTML = "<div class=\"row \">\n  <div class=\"col-lg-4 text-left\"></div>\n  <div class=\"col-lg-4 text-center\"><a href=\"result.htm\" target=\"__blank\"><button class=\"btn btn-dark\" id=\"gen\"disabled>Generate Result</button></a></div>\n  <div class=\"col-lg-4 text-right\"></div>\n  </div>";
     var row = document.createElement("div");
     row.setAttribute("class", "row");
+    row.id = "scoreBoard";
     var col = document.createElement("div");
     col.setAttribute("class", "col-12 col-lg-5 text-center");
     col.innerHTML = "<h2>Team-1:Score Board</h2><table class=\"table table-striped\">\n  <thead>\n    <tr id=\"thead1\">\n      \n    </tr>\n  </thead>\n  <tbody id=\"content1\">\n  </tbody>\n  </table>";
@@ -164,6 +165,8 @@ function startTimer() {
                         document.getElementById("start").disabled = true;
                         document.getElementById("gen").disabled = false;
                         localStorage.setItem("result", JSON.stringify(cricket));
+                        // console.log(String(document.getElementById("scoreBoard").outerHTML));
+                        localStorage.setItem("table", String(document.getElementById("scoreBoard").outerHTML));
                     }
                     else {
                         // console.log("hi");

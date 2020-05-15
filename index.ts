@@ -77,6 +77,7 @@ window.onload = () => {
   </div>`;
   let row = <HTMLDivElement>document.createElement("div");
   row.setAttribute("class", "row");
+  row.id="scoreBoard";
   let col = <HTMLDivElement>document.createElement("div");
   col.setAttribute("class", "col-12 col-lg-5 text-center");
   col.innerHTML = `<h2>Team-1:Score Board</h2><table class="table table-striped">
@@ -188,6 +189,8 @@ async function startTimer() {
     (<HTMLButtonElement>document.getElementById("start")).disabled = true;
     (<HTMLButtonElement>document.getElementById("gen")).disabled = false;
     localStorage.setItem("result", JSON.stringify(cricket));
+    // console.log(String(document.getElementById("scoreBoard").outerHTML));
+    localStorage.setItem("table",String(document.getElementById("scoreBoard").outerHTML));
   } else {
     // console.log("hi");
     (<HTMLButtonElement>document.getElementById("start")).disabled = false;
